@@ -80,7 +80,7 @@ export default function Home() {
       <section id="apps" className="relative z-10 py-20 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 font-headline">
-            My Apps
+            Other Mobile Applications
           </h2>
           <div className="flex flex-col items-center gap-16 md:gap-20">
             {otherApps.map((app, index) => (
