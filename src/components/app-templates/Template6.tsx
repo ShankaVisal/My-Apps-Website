@@ -8,7 +8,6 @@ import { AppGallery } from '@/components/AppGallery';
 import { motion } from 'framer-motion';
 import { PhoneMockup } from '../PhoneMockup';
 import { CallToActionBanner } from '../CallToActionBanner';
-import { AITemplateSuggester } from '../AITemplateSuggester';
 
 type TemplateProps = {
   app: App;
@@ -54,7 +53,6 @@ export default function Template6({ app }: TemplateProps) {
 
                   <div className="max-w-4xl mx-auto">
                     <AppGallery images={app.gallery} appName={app.name} />
-                    <AITemplateSuggester app={app} />
                   </div>
               </div>
           </div>

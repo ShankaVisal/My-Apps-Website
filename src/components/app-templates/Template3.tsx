@@ -4,7 +4,6 @@ import { DownloadButtons } from '@/components/DownloadButtons';
 import { TechStackBadges } from '@/components/TechStackBadges';
 import { AppGallery } from '@/components/AppGallery';
 import { CallToActionBanner } from '@/components/CallToActionBanner';
-import { AITemplateSuggester } from '../AITemplateSuggester';
 
 type TemplateProps = {
   app: App;
@@ -45,7 +44,6 @@ export default function Template3({ app }: TemplateProps) {
       </div>
       <div className="container mx-auto px-4">
          <AppGallery images={app.gallery} appName={app.name} />
-         <AITemplateSuggester app={app} />
       </div>
       <CallToActionBanner />
     </div>

@@ -8,7 +8,6 @@ import { AppGallery } from '@/components/AppGallery';
 import { Card, CardContent } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 import { CallToActionBanner } from '@/components/CallToActionBanner';
-import { AITemplateSuggester } from '../AITemplateSuggester';
 
 type TemplateProps = {
   app: App;
@@ -98,7 +97,6 @@ export default function Template4({ app }: TemplateProps) {
               variants={cardVariants}
             >
               <AppGallery images={app.gallery} appName={app.name} />
-               <AITemplateSuggester app={app} />
             </motion.div>
           </div>
       </div>
