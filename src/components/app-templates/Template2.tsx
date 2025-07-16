@@ -4,6 +4,7 @@ import { DownloadButtons } from '@/components/DownloadButtons';
 import { TechStackBadges } from '@/components/TechStackBadges';
 import { AppGallery } from '@/components/AppGallery';
 import { CallToActionBanner } from '@/components/CallToActionBanner';
+import { AITemplateSuggester } from '../AITemplateSuggester';
 
 type TemplateProps = {
   app: App;
@@ -30,23 +31,26 @@ export default function Template2({ app }: TemplateProps) {
             />
           </div>
           
-          <div className="max-w-3xl mx-auto">
-              <section className="mb-12">
-                  <h2 className="text-3xl font-bold font-headline text-accent mb-4 border-b-2 border-accent/30 pb-2">Description</h2>
-                  <p className="text-gray-300 leading-relaxed text-lg">{app.longDescription}</p>
+          <div className="max-w-4xl mx-auto">
+              <section className="mb-12 prose prose-invert prose-lg max-w-none">
+                  <h2 className="text-3xl font-bold font-headline text-accent border-b-2 border-accent/30 pb-2">Description</h2>
+                  <p className="text-gray-300 leading-relaxed">{app.longDescription}</p>
               </section>
 
               <section className="mb-12">
                   <h3 className="text-3xl font-bold font-headline text-accent mb-4 border-b-2 border-accent/30 pb-2">Core Technologies</h3>
                   <TechStackBadges tags={app.techStack} />
               </section>
-          </div>
 
-          <div className="text-center">
-              <DownloadButtons androidUrl={app.downloadLinks.android} iosUrl={app.downloadLinks.ios} />
+              <div className="text-center">
+                  <DownloadButtons androidUrl={app.downloadLinks.android} iosUrl={app.downloadLinks.ios} />
+              </div>
           </div>
           
-          <AppGallery images={app.gallery} appName={app.name} />
+          <div className="max-w-4xl mx-auto">
+            <AppGallery images={app.gallery} appName={app.name} />
+            <AITemplateSuggester app={app} />
+          </div>
         </div>
       </div>
       <CallToActionBanner />

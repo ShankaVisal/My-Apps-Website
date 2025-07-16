@@ -8,6 +8,7 @@ import { AppGallery } from '@/components/AppGallery';
 import { motion } from 'framer-motion';
 import { PhoneMockup } from '../PhoneMockup';
 import { CallToActionBanner } from '../CallToActionBanner';
+import { AITemplateSuggester } from '../AITemplateSuggester';
 
 type TemplateProps = {
   app: App;
@@ -42,14 +43,19 @@ export default function Template6({ app }: TemplateProps) {
           <div className="py-20 bg-muted/50">
               <div className="container mx-auto px-4">
                   <div className="max-w-4xl mx-auto">
-                      <h2 className="text-4xl font-bold font-headline mb-4 text-center">Features & Technology</h2>
-                      <p className="text-lg text-muted-foreground leading-relaxed text-center mb-10">{app.longDescription}</p>
-                      <div className="text-center">
+                      <div className="prose dark:prose-invert max-w-none mb-10 text-center">
+                        <h2 className="text-4xl font-bold font-headline">Features & Technology</h2>
+                        <p className="text-lg text-muted-foreground leading-relaxed">{app.longDescription}</p>
+                      </div>
+                      <div className="text-center mb-12">
                           <TechStackBadges tags={app.techStack} />
                       </div>
                   </div>
 
-                  <AppGallery images={app.gallery} appName={app.name} />
+                  <div className="max-w-4xl mx-auto">
+                    <AppGallery images={app.gallery} appName={app.name} />
+                    <AITemplateSuggester app={app} />
+                  </div>
               </div>
           </div>
       </div>

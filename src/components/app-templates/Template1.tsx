@@ -4,6 +4,7 @@ import { DownloadButtons } from '@/components/DownloadButtons';
 import { TechStackBadges } from '@/components/TechStackBadges';
 import { AppGallery } from '@/components/AppGallery';
 import { CallToActionBanner } from '@/components/CallToActionBanner';
+import { AITemplateSuggester } from '../AITemplateSuggester';
 
 type TemplateProps = {
   app: App;
@@ -43,19 +44,20 @@ export default function Template1({ app }: TemplateProps) {
               />
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="md:col-span-2">
-                <h2 className="text-3xl font-bold font-headline mb-4">About the App</h2>
+            <div className="prose dark:prose-invert max-w-none mx-auto mb-12">
+                <h2 className="text-3xl font-bold font-headline">About the App</h2>
                 <p className="text-foreground/80 leading-relaxed">{app.longDescription}</p>
-                <DownloadButtons androidUrl={app.downloadLinks.android} iosUrl={app.downloadLinks.ios} />
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold font-headline mb-4">Tech Stack</h3>
-                <TechStackBadges tags={app.techStack} />
-              </div>
             </div>
             
+            <div className="mb-12">
+                <h3 className="text-2xl font-bold font-headline mb-4">Tech Stack</h3>
+                <TechStackBadges tags={app.techStack} />
+            </div>
+
+            <DownloadButtons androidUrl={app.downloadLinks.android} iosUrl={app.downloadLinks.ios} />
+            
             <AppGallery images={app.gallery} appName={app.name} />
+            <AITemplateSuggester app={app} />
           </div>
         </div>
       </div>

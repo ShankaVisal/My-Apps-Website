@@ -4,6 +4,7 @@ import { DownloadButtons } from '@/components/DownloadButtons';
 import { TechStackBadges } from '@/components/TechStackBadges';
 import { AppGallery } from '@/components/AppGallery';
 import { CallToActionBanner } from '@/components/CallToActionBanner';
+import { AITemplateSuggester } from '../AITemplateSuggester';
 
 type TemplateProps = {
   app: App;
@@ -36,20 +37,17 @@ export default function Template5({ app }: TemplateProps) {
               />
           </div>
 
-          <div className="grid md:grid-cols-5 gap-8">
-              <div className="md:col-span-3">
-                  <NeumorphicCard>
-                      <h2 className="text-3xl font-bold font-headline mb-4">About the App</h2>
-                      <p className="text-foreground/80 leading-relaxed">{app.longDescription}</p>
-                  </NeumorphicCard>
+          <NeumorphicCard className="mb-8">
+              <div className="prose dark:prose-invert max-w-none">
+                <h2 className="text-3xl font-bold font-headline">About the App</h2>
+                <p className="text-foreground/80 leading-relaxed">{app.longDescription}</p>
               </div>
-              <div className="md:col-span-2">
-                  <NeumorphicCard>
-                      <h3 className="text-2xl font-bold font-headline mb-4">Tech Stack</h3>
-                      <TechStackBadges tags={app.techStack} />
-                  </NeumorphicCard>
-              </div>
-          </div>
+          </NeumorphicCard>
+
+          <NeumorphicCard className="mb-8">
+              <h3 className="text-2xl font-bold font-headline mb-4">Tech Stack</h3>
+              <TechStackBadges tags={app.techStack} />
+          </NeumorphicCard>
 
           <div className="mt-12 text-center">
               <DownloadButtons androidUrl={app.downloadLinks.android} iosUrl={app.downloadLinks.ios} />
@@ -57,6 +55,7 @@ export default function Template5({ app }: TemplateProps) {
           
           <div className="mt-8">
             <AppGallery images={app.gallery} appName={app.name} />
+            <AITemplateSuggester app={app} />
           </div>
         </div>
       </div>

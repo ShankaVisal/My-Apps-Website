@@ -5,9 +5,10 @@ import type { App } from '@/lib/types';
 import { DownloadButtons } from '@/components/DownloadButtons';
 import { TechStackBadges } from '@/components/TechStackBadges';
 import { AppGallery } from '@/components/AppGallery';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 import { CallToActionBanner } from '@/components/CallToActionBanner';
+import { AITemplateSuggester } from '../AITemplateSuggester';
 
 type TemplateProps = {
   app: App;
@@ -40,9 +41,9 @@ export default function Template4({ app }: TemplateProps) {
               <p className="text-xl text-muted-foreground">{app.shortDescription}</p>
           </header>
 
-          <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="container mx-auto px-4">
               <MotionCard 
-                className="w-full"
+                className="w-full mb-8"
                 initial="offscreen"
                 whileInView="onscreen"
                 viewport={{ once: true, amount: 0.3 }}
@@ -54,12 +55,27 @@ export default function Template4({ app }: TemplateProps) {
                       alt={app.name}
                       width={1200}
                       height={800}
-                      className="rounded-t-lg object-cover"
+                      className="rounded-lg object-cover"
                       data-ai-hint="app screenshot"
                   />
                 </CardContent>
               </MotionCard>
               
+              <MotionCard 
+                className="w-full flex flex-col justify-center mb-8"
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0.3 }}
+                variants={cardVariants}
+              >
+                <CardContent className="p-6">
+                    <div className="prose dark:prose-invert max-w-none">
+                        <h2 className="font-headline text-2xl">About The App</h2>
+                        <p className="text-muted-foreground">{app.longDescription}</p>
+                    </div>
+                </CardContent>
+              </MotionCard>
+
               <MotionCard 
                 className="w-full flex flex-col justify-center"
                 initial="offscreen"
@@ -67,11 +83,7 @@ export default function Template4({ app }: TemplateProps) {
                 viewport={{ once: true, amount: 0.3 }}
                 variants={cardVariants}
               >
-                <CardHeader>
-                    <CardTitle className="font-headline text-2xl">About The App</CardTitle>
-                </CardHeader>
-                <CardContent>
-                    <p className="text-muted-foreground mb-6">{app.longDescription}</p>
+                <CardContent className="p-6">
                     <h3 className="text-lg font-bold font-headline mb-3">Core Tech</h3>
                     <TechStackBadges tags={app.techStack} />
                     <DownloadButtons androidUrl={app.downloadLinks.android} iosUrl={app.downloadLinks.ios} />
@@ -86,6 +98,7 @@ export default function Template4({ app }: TemplateProps) {
               variants={cardVariants}
             >
               <AppGallery images={app.gallery} appName={app.name} />
+               <AITemplateSuggester app={app} />
             </motion.div>
           </div>
       </div>
