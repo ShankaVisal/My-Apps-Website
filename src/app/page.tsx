@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { RecentApp } from '@/components/RecentApp';
 import { CallToActionBanner } from '@/components/CallToActionBanner';
+import { OfficialWebsiteBanner } from '@/components/OfficialWebsiteBanner';
 
 export default function Home() {
   const apps = getApps();
@@ -86,6 +87,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <OfficialWebsiteBanner />
 
       <CallToActionBanner />
     </div>
