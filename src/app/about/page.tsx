@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Mail, Phone } from 'lucide-react';
 
 export default function AboutPage() {
   const skills = ['Android (Kotlin/Java)', 'iOS (Swift/SwiftUI)', 'React Native', 'Flutter', 'Next.js', 'Firebase', 'UI/UX Design'];
@@ -30,22 +30,39 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <section className="py-20">
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-center text-3xl font-headline">My Skillset</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-                {skills.map(skill => (
-                  <li key={skill} className="flex items-center text-md">
-                    <CheckCircle className="h-5 w-5 mr-2 text-primary" />
-                    <span>{skill}</span>
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
+        <section className="py-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-center text-3xl font-headline">My Skillset</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="grid grid-cols-2 sm:grid-cols-2 gap-6">
+                  {skills.map(skill => (
+                    <li key={skill} className="flex items-center text-md">
+                      <CheckCircle className="h-5 w-5 mr-2 text-primary" />
+                      <span>{skill}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-center text-3xl font-headline">Contact Information</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="flex items-center">
+                  <Mail className="h-5 w-5 mr-3 text-primary" />
+                  <a href="mailto:shankavisal@gmail.com" className="hover:underline">shankavisal@gmail.com</a>
+                </div>
+                <div className="flex items-center">
+                  <Phone className="h-5 w-5 mr-3 text-primary" />
+                  <span>(+94) 77 1775 703</span>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
         </section>
       </div>
     </div>

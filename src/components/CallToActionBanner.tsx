@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from './ui/button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Mail, Phone } from 'lucide-react';
 
 export function CallToActionBanner() {
   const banner: Banner = getBannerData();
@@ -62,9 +62,19 @@ export function CallToActionBanner() {
                     <motion.h2 className="text-4xl md:text-5xl font-bold font-headline mb-4" variants={itemVariants}>
                         {banner.title}
                     </motion.h2>
-                    <motion.p className="text-lg text-muted-foreground mb-8 max-w-lg mx-auto lg:mx-0" variants={itemVariants}>
+                    <motion.p className="text-lg text-muted-foreground mb-6 max-w-lg mx-auto lg:mx-0" variants={itemVariants}>
                         {banner.description}
                     </motion.p>
+                    <motion.div className="flex flex-col sm:flex-row gap-4 items-center justify-center lg:justify-start mb-8" variants={itemVariants}>
+                        <div className="flex items-center">
+                            <Mail className="h-5 w-5 mr-2 text-primary" />
+                            <a href="mailto:shankavisal@gmail.com" className="hover:underline text-sm">shankavisal@gmail.com</a>
+                        </div>
+                        <div className="flex items-center">
+                            <Phone className="h-5 w-5 mr-2 text-primary" />
+                            <span className="text-sm">(+94) 77 1775 703</span>
+                        </div>
+                    </motion.div>
                     <motion.div variants={itemVariants}>
                         <Button asChild size="lg" className="px-8 py-6 text-lg">
                             <Link href={banner.buttonLink}>
