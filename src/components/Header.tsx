@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { ThemeToggle } from './ThemeToggle';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -69,8 +70,8 @@ export default function Header() {
           </Sheet>
         </div>
 
-        <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
-          {/* Future elements like theme toggle can go here */}
+        <div className="flex flex-1 items-center justify-end space-x-2">
+          <ThemeToggle />
         </div>
       </div>
     </header>
