@@ -32,10 +32,12 @@ export default function AppCard({ app, index }: AppCardProps) {
       variants={cardVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true }}
+      viewport={{ once: true, amount: 0.2 }}
+      whileHover={{ y: -5, scale: 1.02 }}
+      transition={{ type: 'spring', stiffness: 300 }}
     >
       <Link href={`/apps/${app.slug}`} className="block group">
-        <Card className="h-full overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+        <Card className="h-full overflow-hidden transition-shadow duration-300 hover:shadow-xl">
           <CardHeader className="p-0">
             <div className="aspect-video overflow-hidden">
               <Image

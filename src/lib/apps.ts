@@ -1,22 +1,14 @@
-import fs from 'fs';
-import path from 'path';
+import appsData from '@/data/apps.json';
 import type { App } from './types';
 
-const appsFilePath = path.join(process.cwd(), 'src/data/apps.json');
-
-// Memoize the data so we don't have to read the file every time.
-let appsCache: App[];
+// The JSON file is imported directly, so no need for fs.
+const apps: App[] = appsData;
 
 export function getApps(): App[] {
-  if (appsCache) {
-    return appsCache;
-  }
-  const jsonData = fs.readFileSync(appsFilePath, 'utf-8');
-  appsCache = JSON.parse(jsonData);
-  return appsCache;
+  return apps;
 }
 
 export function getAppBySlug(slug: string): App | undefined {
-  const apps = getApps();
-  return apps.find(app => app.slug === slug);
+  const allApps = getApps();
+  return allApps.find(app => app.slug === slug);
 }
