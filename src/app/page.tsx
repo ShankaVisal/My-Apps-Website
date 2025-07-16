@@ -95,7 +95,7 @@ export default function Home() {
 
       <motion.section 
         id="apps" 
-        className="relative z-10 py-20 bg-muted/20"
+        className="relative z-10 py-24 sm:py-32 bg-muted/20"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.1 }}
@@ -103,13 +103,13 @@ export default function Home() {
       >
         <div className="container mx-auto px-4">
           <motion.h2 
-            className="text-4xl md:text-5xl font-bold text-center mb-12 font-headline"
+            className="text-4xl md:text-5xl font-bold text-center mb-16 font-headline"
             variants={item}
           >
             All Mobile Applications
           </motion.h2>
           <motion.div 
-            className="flex flex-col items-center gap-16 md:gap-20"
+            className="flex flex-col items-center gap-20 md:gap-24"
             variants={container}
           >
             {otherApps.map((app, index) => (

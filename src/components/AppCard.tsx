@@ -29,15 +29,16 @@ export default function AppCard({ app }: AppCardProps) {
 
   return (
     <motion.div
-      className="w-full max-w-4xl"
+      className="w-full max-w-5xl"
       variants={cardVariants}
     >
       <Link href={`/apps/${app.slug}`} className="block group">
-        <Card className="overflow-hidden transition-shadow duration-300 hover:shadow-2xl bg-card/80 backdrop-blur-sm border">
-          <div className="grid grid-cols-1 md:grid-cols-2 items-center">
-            <div className="p-6 md:p-8 order-2 md:order-1">
+        <Card className="overflow-hidden transition-shadow duration-300 hover:shadow-2xl bg-card/80 backdrop-blur-sm border group relative">
+           <div className="absolute -inset-px rounded-lg bg-gradient-to-r from-primary/50 via-accent/50 to-secondary/50 opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 items-center relative">
+            <div className="p-8 md:p-10 order-2 md:order-1">
               <CardHeader className="p-0 mb-4">
-                <CardTitle className="font-headline text-3xl mb-2">{app.name}</CardTitle>
+                <CardTitle className="font-headline text-4xl mb-2">{app.name}</CardTitle>
                 <CardDescription className="text-lg">{app.shortDescription}</CardDescription>
               </CardHeader>
               <CardContent className="p-0">
