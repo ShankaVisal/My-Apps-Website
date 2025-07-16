@@ -2,8 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
+import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import type { App } from '@/lib/types';
@@ -15,21 +14,23 @@ type AppCardProps = {
 };
 
 export default function AppCard({ app }: AppCardProps) {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start end', 'end start'],
-  });
-
-  const scale = useTransform(scrollYProgress, [0, 0.4], [0.8, 1]);
-  const opacity = useTransform(scrollYProgress, [0, 0.4], [0.5, 1]);
-  const imageY = useTransform(scrollYProgress, [0, 1], ['-15%', '15%']);
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: {
+        type: 'spring',
+        stiffness: 70,
+        damping: 15,
+      }
+    },
+  };
 
   return (
     <motion.div
-      ref={ref}
-      style={{ scale, opacity }}
       className="w-full max-w-4xl"
+      variants={cardVariants}
     >
       <Link href={`/apps/${app.slug}`} className="block group">
         <Card className="overflow-hidden transition-shadow duration-300 hover:shadow-2xl bg-card/80 backdrop-blur-sm border">
@@ -53,14 +54,15 @@ export default function AppCard({ app }: AppCardProps) {
             <div className="aspect-square md:aspect-auto md:h-full overflow-hidden order-1 md:order-2">
                <motion.div
                   className="w-full h-full"
-                  style={{ y: imageY }}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
                 >
                 <Image
                   src={app.featureImage}
                   alt={app.name}
                   width={600}
                   height={600}
-                  className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-500 ease-out"
                   data-ai-hint="app screenshot"
                 />
               </motion.div>

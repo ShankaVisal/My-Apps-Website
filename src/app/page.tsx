@@ -29,6 +29,22 @@ export default function Home() {
     visible: { opacity: 1, y: 0 },
   };
 
+  const container = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+
   return (
     <div className="bg-background overflow-hidden">
       <motion.section
@@ -77,18 +93,31 @@ export default function Home() {
 
       <OfficialWebsiteBanner />
 
-      <section id="apps" className="relative z-10 py-20 bg-background">
+      <motion.section 
+        id="apps" 
+        className="relative z-10 py-20 bg-muted/20"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        variants={container}
+      >
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 font-headline">
+          <motion.h2 
+            className="text-4xl md:text-5xl font-bold text-center mb-12 font-headline"
+            variants={item}
+          >
             All Mobile Applications
-          </h2>
-          <div className="flex flex-col items-center gap-16 md:gap-20">
+          </motion.h2>
+          <motion.div 
+            className="flex flex-col items-center gap-16 md:gap-20"
+            variants={container}
+          >
             {otherApps.map((app, index) => (
               <AppCard key={app.slug} app={app} index={index} />
             ))}
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       <CallToActionBanner />
     </div>
