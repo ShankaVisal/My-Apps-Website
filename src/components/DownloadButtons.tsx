@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 type DownloadButtonsProps = {
@@ -33,13 +32,13 @@ export function DownloadButtons({ androidUrl, iosUrl }: DownloadButtonsProps) {
       <Button asChild size="lg" className="bg-green-600 hover:bg-green-700 text-white" disabled={!isAndroidAvailable}>
         <Link href={androidUrl} target="_blank" rel="noopener noreferrer">
           <GooglePlayIcon/>
-          Get on Google Play
+          Get on Playstore
         </Link>
       </Button>
       <Button asChild size="lg" className="bg-black hover:bg-gray-800 text-white dark:bg-white dark:text-black dark:hover:bg-gray-200" disabled={!isIosAvailable}>
         <Link href={iosUrl} target="_blank" rel="noopener noreferrer">
           <AppleIcon/>
-          Download on the App Store
+          Get on App Store
         </Link>
       </Button>
     </div>
