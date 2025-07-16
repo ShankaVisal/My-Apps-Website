@@ -5,7 +5,6 @@ import Template3 from './Template3';
 import Template4 from './Template4';
 import Template5 from './Template5';
 import Template6 from './Template6';
-import { AITemplateSuggester } from '@/components/AITemplateSuggester';
 
 type AppTemplateRendererProps = {
   app: App;
@@ -35,9 +34,6 @@ export function AppTemplateRenderer({ app }: AppTemplateRendererProps) {
   return (
     <article>
         {renderTemplate()}
-        <div className="container mx-auto px-4">
-            <AITemplateSuggester app={app} />
-        </div>
     </article>
   );
 }

@@ -25,30 +25,23 @@ const GooglePlayIcon = () => (
 
 
 export function DownloadButtons({ androidUrl, iosUrl }: DownloadButtonsProps) {
+  const isAndroidAvailable = androidUrl && androidUrl !== '#';
+  const isIosAvailable = iosUrl && iosUrl !== '#';
+
   return (
     <div className="flex flex-wrap gap-4 mt-8">
-      {androidUrl && androidUrl !== '#' && (
-        <Button asChild size="lg" className="bg-green-600 hover:bg-green-700 text-white">
-          <Link href={androidUrl} target="_blank" rel="noopener noreferrer">
-            <GooglePlayIcon/>
-            Get on Google Play
-          </Link>
-        </Button>
-      )}
-      {iosUrl && iosUrl !== '#' && (
-        <Button asChild size="lg" className="bg-black hover:bg-gray-800 text-white dark:bg-white dark:text-black dark:hover:bg-gray-200">
-          <Link href={iosUrl} target="_blank" rel="noopener noreferrer">
-            <AppleIcon/>
-            Download on the App Store
-          </Link>
-        </Button>
-      )}
-      {((!androidUrl || androidUrl === '#') && (!iosUrl || iosUrl === '#')) && (
-         <Button disabled size="lg">
-            <Download className="mr-2 h-5 w-5" />
-            Coming Soon
-        </Button>
-      )}
+      <Button asChild size="lg" className="bg-green-600 hover:bg-green-700 text-white" disabled={!isAndroidAvailable}>
+        <Link href={androidUrl} target="_blank" rel="noopener noreferrer">
+          <GooglePlayIcon/>
+          Get on Google Play
+        </Link>
+      </Button>
+      <Button asChild size="lg" className="bg-black hover:bg-gray-800 text-white dark:bg-white dark:text-black dark:hover:bg-gray-200" disabled={!isIosAvailable}>
+        <Link href={iosUrl} target="_blank" rel="noopener noreferrer">
+          <AppleIcon/>
+          Download on the App Store
+        </Link>
+      </Button>
     </div>
   );
 }
