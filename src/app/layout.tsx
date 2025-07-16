@@ -8,8 +8,49 @@ import { ThemeProvider } from '@/components/ThemeProvider';
 
 
 export const metadata: Metadata = {
-  title: 'Visal Apps Showcase',
-  description: 'Personal website for Shanka Visal to showcase mobile apps.',
+  metadataBase: new URL('https://www.shankavisal.com'),
+  title: {
+    default: "Shanka Visal's App Showcase & Portfolio",
+    template: `%s | Shanka Visal`,
+  },
+  description: 'Explore the mobile app portfolio of Shanka Visal, a passionate app developer creating innovative Android and iOS applications. Discover my work and get in touch for collaboration.',
+  keywords: ["Shanka Visal", "mobile app developer", "iOS developer", "Android developer", "React Native developer", "Flutter developer", "Next.js", "Firebase", "app portfolio", "software engineer"],
+  creator: "Shanka Visal",
+  authors: [{ name: "Shanka Visal", url: "https://www.shankavisal.com" }],
+  openGraph: {
+    title: "Shanka Visal's App Showcase & Portfolio",
+    description: "Explore the mobile app portfolio of Shanka Visal, a passionate app developer creating innovative Android and iOS applications.",
+    url: "https://www.shankavisal.com",
+    siteName: "Shanka Visal's Portfolio",
+    images: [
+      {
+        url: 'https://placehold.co/1200x630.png',
+        width: 1200,
+        height: 630,
+        alt: "Shanka Visal's App Showcase",
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Shanka Visal's App Showcase & Portfolio",
+    description: "Explore the mobile app portfolio of Shanka Visal, a passionate app developer creating innovative Android and iOS applications.",
+    creator: '@shankavisal',
+    images: ['https://placehold.co/1200x630.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({

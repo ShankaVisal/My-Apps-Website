@@ -21,9 +21,22 @@ export async function generateMetadata(
     }
   }
  
+  const previousImages = (await parent).openGraph?.images || []
+
   return {
-    title: `${app.name} | Visal Apps Showcase`,
+    title: `${app.name} by Shanka Visal`,
     description: app.shortDescription,
+    openGraph: {
+      title: `${app.name} | App by Shanka Visal`,
+      description: app.shortDescription,
+      images: [app.featureImage, ...previousImages],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${app.name} | App by Shanka Visal`,
+      description: app.shortDescription,
+      images: [app.featureImage],
+    },
   }
 }
 

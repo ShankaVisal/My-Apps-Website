@@ -1,6 +1,13 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle, Mail, Phone } from 'lucide-react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About Shanka Visal',
+  description: 'Learn more about Shanka Visal, a dedicated mobile application developer with expertise in Android, iOS, React Native, and more. Discover my skills and passion for creating user-centric apps.',
+};
+
 
 export default function AboutPage() {
   const skills = ['Android (Kotlin/Java)', 'iOS (Swift/SwiftUI)', 'React Native', 'Flutter', 'Next.js', 'Firebase', 'UI/UX Design'];

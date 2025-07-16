@@ -9,6 +9,27 @@ import { RecentApp } from '@/components/RecentApp';
 import { CallToActionBanner } from '@/components/CallToActionBanner';
 import { OfficialWebsiteBanner } from '@/components/OfficialWebsiteBanner';
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Shanka Visal',
+  url: 'https://www.shankavisal.com',
+  sameAs: [
+    'https://github.com/shankavisal',
+    'https://twitter.com/shankavisal',
+    'https://linkedin.com/in/shankavisal',
+    'https://facebook.com/shankavisal',
+    'https://instagram.com/shankavisal',
+    'https://youtube.com/shankavisal'
+  ],
+  jobTitle: 'Mobile Application Developer',
+  worksFor: {
+    '@type': 'Organization',
+    name: 'Shanka Visal'
+  },
+  image: 'https://placehold.co/400x400.png'
+};
+
 export default function Home() {
   const apps = getApps();
   const recentApp = apps[0];
@@ -47,6 +68,10 @@ export default function Home() {
 
   return (
     <div className="bg-background overflow-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <motion.section
         className="h-screen flex flex-col items-center justify-center text-center p-4 relative"
       >
@@ -54,7 +79,8 @@ export default function Home() {
           className="text-5xl md:text-7xl lg:text-8xl font-bold font-headline tracking-tighter mb-6 text-primary"
           variants={sentence}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true }}
         >
           {'My Apps'.split(' ').map((word, wordIndex) => (
             <span key={wordIndex} className="inline-block whitespace-nowrap mr-4">
@@ -69,7 +95,8 @@ export default function Home() {
         <motion.p
           className="text-lg md:text-xl max-w-3xl mx-auto text-muted-foreground mb-8"
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.8 }}
         >
           A passionate mobile app developer creating innovative and user-centric applications for Android and iOS. Explore my work below.
@@ -77,7 +104,8 @@ export default function Home() {
         <motion.div
           className="flex justify-center gap-4"
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 1 }}
         >
           <Button asChild size="lg" className="px-10 py-6 text-lg">
