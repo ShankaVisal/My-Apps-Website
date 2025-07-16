@@ -1,10 +1,10 @@
 
 [
   {
-    "slug": "nova-launcher",
-    "name": "Nova Launcher",
-    "shortDescription": "A sleek and modern launcher for a new Android experience.",
-    "longDescription": "Nova Launcher replaces your home screen with one you control and can customize. Change icons, layouts, animations and more. It offers a perfect balance between incredible performance and high customizability, allowing you to create a home screen that's uniquely yours.",
+    "slug": "SkinVisions",
+    "name": "SkinVisions",
+    "shortDescription": "SkinVisions is an AI-powered mobile application designed to help users analyze and monitor their skin conditions using image recognition and machine learning.",
+    "longDescription": "SkinVisions is an AI-powered mobile application designed to help users analyze and monitor their skin conditions using image recognition and machine learning. By leveraging artificial intelligence, the app allows users to capture images of their skin and receive insights regarding potential anomalies, such as moles, acne, or other skin-related concerns. SkinVisions is built to empower individuals by providing early detection capabilities, health tracking features, and access to expert dermatologists, ensuring a proactive approach to skin health.",
     "featureImage": "https://placehold.co/1200x800.png",
     "gallery": [
       "https://placehold.co/1200x800.png",
