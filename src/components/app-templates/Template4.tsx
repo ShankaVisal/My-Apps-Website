@@ -34,15 +34,15 @@ const MotionCard = motion(Card);
 export default function Template4({ app }: TemplateProps) {
   return (
     <>
-      <div className="py-20 bg-muted/30">
+      <div className="py-20 bg-background">
           <header className="container mx-auto px-4 text-center mb-12">
               <h1 className="text-5xl font-bold font-headline mb-2">{app.name}</h1>
               <p className="text-xl text-muted-foreground">{app.shortDescription}</p>
           </header>
 
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-4 max-w-4xl">
               <MotionCard 
-                className="w-full mb-8"
+                className="w-full mb-8 overflow-hidden"
                 initial="offscreen"
                 whileInView="onscreen"
                 viewport={{ once: true, amount: 0.3 }}
@@ -54,14 +54,14 @@ export default function Template4({ app }: TemplateProps) {
                       alt={app.name}
                       width={1200}
                       height={800}
-                      className="rounded-lg object-cover"
+                      className="w-full h-full object-cover"
                       data-ai-hint="app screenshot"
                   />
                 </CardContent>
               </MotionCard>
               
               <MotionCard 
-                className="w-full flex flex-col justify-center mb-8"
+                className="w-full mb-8"
                 initial="offscreen"
                 whileInView="onscreen"
                 viewport={{ once: true, amount: 0.3 }}
@@ -76,7 +76,7 @@ export default function Template4({ app }: TemplateProps) {
               </MotionCard>
 
               <MotionCard 
-                className="w-full flex flex-col justify-center"
+                className="w-full"
                 initial="offscreen"
                 whileInView="onscreen"
                 viewport={{ once: true, amount: 0.3 }}
@@ -89,7 +89,7 @@ export default function Template4({ app }: TemplateProps) {
                 </CardContent>
               </MotionCard>
           </div>
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-4 max-w-4xl">
             <motion.div
               initial="offscreen"
               whileInView="onscreen"

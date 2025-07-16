@@ -12,27 +12,15 @@ type TemplateProps = {
 export default function Template1({ app }: TemplateProps) {
   return (
     <>
-      <div className="relative overflow-hidden py-20">
-        <div className="absolute inset-0">
-          <Image 
-            src={app.featureImage} 
-            alt={`${app.name} background`} 
-            layout="fill" 
-            objectFit="cover" 
-            className="blur-2xl scale-110 opacity-30"
-            data-ai-hint="abstract background"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/50 to-background"></div>
-        </div>
-        
-        <div className="container mx-auto px-4 relative">
-          <div className="max-w-4xl mx-auto p-8 bg-card/60 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl">
+      <div className="bg-background py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
             <header className="text-center mb-8">
               <h1 className="text-5xl font-bold font-headline mb-2 text-primary">{app.name}</h1>
               <p className="text-xl text-muted-foreground">{app.shortDescription}</p>
             </header>
 
-            <div className="aspect-video rounded-lg overflow-hidden shadow-lg border border-white/10 mb-12">
+            <div className="aspect-video rounded-lg overflow-hidden shadow-lg mb-12">
               <Image
                 src={app.featureImage}
                 alt={app.name}

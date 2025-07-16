@@ -39,7 +39,7 @@ export default function Template6({ app }: TemplateProps) {
               </div>
           </div>
           
-          <div className="py-20 bg-muted/50">
+          <div className="py-20 bg-muted/30">
               <div className="container mx-auto px-4">
                   <div className="max-w-4xl mx-auto">
                       <div className="prose dark:prose-invert max-w-none mb-10 text-center">
