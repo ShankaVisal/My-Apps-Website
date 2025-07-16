@@ -39,7 +39,7 @@ export default function Header() {
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <AppWindow className="h-6 w-6 text-primary" />
-            <span className="hidden font-bold sm:inline-block font-headline">Visal Apps</span>
+            <span className="hidden font-bold sm:inline-block font-headline">My apps</span>
           </Link>
           <nav className="flex items-center space-x-6 text-sm font-medium">
             {navLinks.map(link => (
@@ -59,7 +59,7 @@ export default function Header() {
             <SheetContent side="left">
               <Link href="/" className="mr-6 flex items-center space-x-2 mb-6" onClick={() => setIsMobileMenuOpen(false)}>
                 <AppWindow className="h-6 w-6 text-primary" />
-                <span className="font-bold font-headline">Visal Apps</span>
+                <span className="font-bold font-headline">My apps</span>
               </Link>
               <nav className="flex flex-col space-y-4">
                 {navLinks.map(link => (

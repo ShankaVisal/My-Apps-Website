@@ -40,7 +40,7 @@ export default function Home() {
           initial="hidden"
           animate="visible"
         >
-          {'Shanka Visal'.split(' ').map((word, wordIndex) => (
+          {'My Apps'.split(' ').map((word, wordIndex) => (
             <span key={wordIndex} className="inline-block whitespace-nowrap mr-4">
               {word.split('').map((char, index) => (
                 <motion.span key={char + '-' + index} variants={letter} className="inline-block">
