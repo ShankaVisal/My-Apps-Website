@@ -12,5 +12,12 @@ export type App = {
   categories: string[];
   techStack: string[];
   templateId: number;
-  designElements: string;
+};
+
+export type Banner = {
+    title: string;
+    description: string;
+    image: string;
+    buttonText: string;
+    buttonLink: string;
 };

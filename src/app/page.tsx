@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { RecentApp } from '@/components/RecentApp';
+import { CallToActionBanner } from '@/components/CallToActionBanner';
 
 export default function Home() {
   const apps = getApps();
@@ -85,6 +86,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <CallToActionBanner />
     </div>
   );
 }
