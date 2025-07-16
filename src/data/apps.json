@@ -1,0 +1,117 @@
+
+[
+  {
+    "slug": "nova-launcher",
+    "name": "Nova Launcher",
+    "shortDescription": "A sleek and modern launcher for a new Android experience.",
+    "longDescription": "Nova Launcher replaces your home screen with one you control and can customize. Change icons, layouts, animations and more. It offers a perfect balance between incredible performance and high customizability, allowing you to create a home screen that's uniquely yours.",
+    "featureImage": "https://placehold.co/1200x800.png",
+    "gallery": [
+      "https://placehold.co/1200x800.png",
+      "https://placehold.co/1200x800.png",
+      "https://placehold.co/1200x800.png"
+    ],
+    "downloadLinks": {
+      "android": "https://play.google.com/store/apps/details?id=com.teslacoilsw.launcher",
+      "ios": "#"
+    },
+    "categories": ["Productivity", "Customization"],
+    "techStack": ["Kotlin", "Jetpack Compose", "Firebase"],
+    "templateId": 1,
+    "designElements": "Glassmorphism style with layered images and soft, blurred backgrounds for a futuristic feel."
+  },
+  {
+    "slug": "dark-mode-notes",
+    "name": "Dark Mode Notes",
+    "shortDescription": "A minimal note-taking app designed for dark mode lovers.",
+    "longDescription": "Focus on your thoughts without distractions. Dark Mode Notes provides a simple, elegant, and fast interface for jotting down ideas. With bold typography and a pure black theme, it's easy on the eyes, especially at night.",
+    "featureImage": "https://placehold.co/1200x800.png",
+    "gallery": [
+      "https://placehold.co/1200x800.png",
+      "https://placehold.co/1200x800.png"
+    ],
+    "downloadLinks": {
+      "android": "#",
+      "ios": "#"
+    },
+    "categories": ["Productivity", "Utilities"],
+    "techStack": ["SwiftUI", "CoreData", "iCloud Sync"],
+    "templateId": 2,
+    "designElements": "A minimal dark theme with a focus on bold, clear typography and high contrast."
+  },
+  {
+    "slug": "split-screen-tasks",
+    "name": "Split Screen Tasks",
+    "shortDescription": "Manage your tasks and calendar side-by-side.",
+    "longDescription": "Stop switching between apps. Split Screen Tasks combines your to-do list and your calendar in a single, powerful view. Drag and drop tasks onto your schedule, see your day at a glance, and boost your productivity.",
+    "featureImage": "https://placehold.co/1200x800.png",
+    "gallery": [
+      "https://placehold.co/1200x800.png"
+    ],
+    "downloadLinks": {
+      "android": "#",
+      "ios": "#"
+    },
+    "categories": ["Productivity"],
+    "techStack": ["React Native", "TypeScript", "Redux"],
+    "templateId": 3,
+    "designElements": "A split-screen layout that shows a feature image on one side and descriptive text on the other."
+  },
+  {
+    "slug": "floating-cards-social",
+    "name": "Floating Cards Social",
+    "shortDescription": "A new way to interact with your social feed.",
+    "longDescription": "Experience social media like never before. Floating Cards Social presents posts, images, and updates in an interactive, card-based UI. Swipe, tap, and expand cards with fluid animations that make browsing your feed a delight.",
+    "featureImage": "https://placehold.co/1200x800.png",
+    "gallery": [
+      "https://placehold.co/1200x800.png",
+      "https://placehold.co/1200x800.png",
+      "https://placehold.co/1200x800.png"
+    ],
+    "downloadLinks": {
+      "android": "#",
+      "ios": "#"
+    },
+    "categories": ["Social", "Lifestyle"],
+    "techStack": ["Flutter", "Dart", "Firebase"],
+    "templateId": 4,
+    "designElements": "A user interface based on floating cards with interactive animations and depth effects."
+  },
+  {
+    "slug": "neumorphic-weather",
+    "name": "Neumorphic Weather",
+    "shortDescription": "A visually soft and calming weather app.",
+    "longDescription": "Check the weather with a beautiful and tactile interface. Neumorphic Weather uses soft shadows and highlights to create a 'soft UI' effect that is pleasing to the eye. Get accurate forecasts in a uniquely designed package.",
+    "featureImage": "https://placehold.co/1200x800.png",
+    "gallery": [
+      "https://placehold.co/1200x800.png",
+      "https://placehold.co/1200x800.png"
+    ],
+    "downloadLinks": {
+      "android": "#",
+      "ios": "#"
+    },
+    "categories": ["Weather", "Utilities"],
+    "techStack": ["Java", "XML", "OpenWeatherMap API"],
+    "templateId": 5,
+    "designElements": "A Neumorphism inspired design with soft shadows and a tactile, three-dimensional feel."
+  },
+  {
+    "slug": "tech-showcase-vr",
+    "name": "Tech Showcase VR",
+    "shortDescription": "Explore the latest gadgets in virtual reality.",
+    "longDescription": "A showcase app for a fictional VR headset. This page demonstrates a tech-focused layout with device mockups, scrolling animations, and embedded video to highlight the product's features and design in a compelling, modern way.",
+    "featureImage": "https://placehold.co/1200x800.png",
+    "gallery": [
+      "https://placehold.co/1200x800.png"
+    ],
+    "downloadLinks": {
+      "android": "#",
+      "ios": "#"
+    },
+    "categories": ["Technology", "VR"],
+    "techStack": ["Next.js", "Three.js", "Framer Motion"],
+    "templateId": 6,
+    "designElements": "A tech showcase layout featuring device mockups, scrolling animations, and video support to display hardware."
+  }
+]
