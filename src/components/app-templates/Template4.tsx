@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import type { App } from '@/lib/types';
 import { DownloadButtons } from '@/components/DownloadButtons';
