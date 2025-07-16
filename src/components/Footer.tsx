@@ -17,9 +17,9 @@ export default function Footer() {
     { name: 'GitHub', icon: Github, href: 'https://github.com/shankavisal' },
     { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/shankavisal' },
     { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/in/shankavisal' },
-    { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/shankavisal' },
-    { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/shankavisal' },
-    { name: 'YouTube', icon: Youtube, href: 'https://youtube.com/shankavisal' },
+    { name: 'Facebook', icon: Facebook, href: 'https://www.facebook.com/profile.php?id=100009443564668' },
+    { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/shanka_visal__' },
+    { name: 'YouTube', icon: Youtube, href: 'https://www.youtube.com/@shankavisal' },
     { name: 'TikTok', icon: TikTokIcon, href: 'https://tiktok.com/@shankavisal' },
   ];
 

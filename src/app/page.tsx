@@ -18,9 +18,9 @@ const jsonLd = {
     'https://github.com/shankavisal',
     'https://twitter.com/shankavisal',
     'https://linkedin.com/in/shankavisal',
-    'https://facebook.com/shankavisal',
-    'https://instagram.com/shankavisal',
-    'https://youtube.com/shankavisal'
+    'https://www.facebook.com/profile.php?id=100009443564668',
+    'https://www.instagram.com/shanka_visal__',
+    'https://www.youtube.com/@shankavisal'
   ],
   jobTitle: 'Mobile Application Developer',
   worksFor: {
