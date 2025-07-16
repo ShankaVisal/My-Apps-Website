@@ -12,7 +12,7 @@ type TemplateProps = {
 export default function Template2({ app }: TemplateProps) {
   return (
     <>
-      <div className="bg-background py-16">
+      <div className="py-16">
         <div className="container mx-auto px-4">
           <header className="max-w-3xl mx-auto text-center mb-16">
             <h1 className="text-6xl md:text-8xl font-bold font-headline tracking-tighter mb-4">{app.name}</h1>
@@ -31,9 +31,9 @@ export default function Template2({ app }: TemplateProps) {
           </div>
           
           <div className="max-w-4xl mx-auto">
-              <section className="mb-12 prose dark:prose-invert prose-lg max-w-none">
-                  <h2 className="text-3xl font-bold font-headline border-b-2 border-border pb-2">Description</h2>
-                  <p className="text-muted-foreground leading-relaxed">{app.longDescription}</p>
+              <section className="mb-12 max-w-none">
+                  <h2 className="text-3xl font-bold font-headline border-b-2 border-border pb-2 mb-4">Description</h2>
+                  <p className="text-muted-foreground leading-relaxed text-lg">{app.longDescription}</p>
               </section>
 
               <section className="mb-12">
