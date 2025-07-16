@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 import { RecentApp } from '@/components/RecentApp';
 import { CallToActionBanner } from '@/components/CallToActionBanner';
 import { OfficialWebsiteBanner } from '@/components/OfficialWebsiteBanner';
+import Ripple from '@/components/ui/ripple';
 
 export default function Home() {
   const apps = getApps();
@@ -50,22 +51,24 @@ export default function Home() {
       <motion.section
         className="h-screen flex flex-col items-center justify-center text-center p-4 relative"
       >
-        <motion.h1
-          className="text-5xl md:text-7xl lg:text-8xl font-bold font-headline tracking-tighter mb-6 text-primary"
-          variants={sentence}
-          initial="hidden"
-          animate="visible"
-        >
-          {'My Apps'.split(' ').map((word, wordIndex) => (
-            <span key={wordIndex} className="inline-block whitespace-nowrap mr-4">
-              {word.split('').map((char, index) => (
-                <motion.span key={char + '-' + index} variants={letter} className="inline-block">
-                  {char}
-                </motion.span>
-              ))}
-            </span>
-          ))}
-        </motion.h1>
+        <Ripple>
+          <motion.h1
+            className="text-5xl md:text-7xl lg:text-8xl font-bold font-headline tracking-tighter mb-6 text-primary"
+            variants={sentence}
+            initial="hidden"
+            animate="visible"
+          >
+            {'My Apps'.split(' ').map((word, wordIndex) => (
+              <span key={wordIndex} className="inline-block whitespace-nowrap mr-4">
+                {word.split('').map((char, index) => (
+                  <motion.span key={char + '-' + index} variants={letter} className="inline-block">
+                    {char}
+                  </motion.span>
+                ))}
+              </span>
+            ))}
+          </motion.h1>
+        </Ripple>
         <motion.p
           className="text-lg md:text-xl max-w-3xl mx-auto text-muted-foreground mb-8"
           initial={{ opacity: 0, y: 20 }}
@@ -95,7 +98,7 @@ export default function Home() {
 
       <motion.section 
         id="apps" 
-        className="relative z-10 py-24 sm:py-32 bg-muted/20"
+        className="relative z-10 py-24 sm:py-32"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.1 }}

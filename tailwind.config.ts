@@ -96,11 +96,22 @@ export default {
             "background-position": "calc(100% + var(--shimmer-size)) 0",
           },
         },
+        "ripple": {
+          "0%, 100%": {
+            transform: "scale(1)",
+            opacity: "0.2",
+          },
+          "50%": {
+            transform: "scale(3)",
+            opacity: "0",
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'shimmer': 'shimmer var(--shimmer-duration) infinite',
+        "ripple": "ripple var(--ripple-duration) infinite",
       },
     },
   },
