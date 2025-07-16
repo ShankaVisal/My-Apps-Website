@@ -69,7 +69,7 @@ export default function Template4({ app }: TemplateProps) {
               >
                 <CardContent className="p-6">
                     <div className="prose dark:prose-invert max-w-none">
-                        <h2 className="font-headline text-2xl">About The App</h2>
+                        <h2 className="font-headline text-2xl font-bold">About The App</h2>
                         <p className="text-muted-foreground">{app.longDescription}</p>
                     </div>
                 </CardContent>
