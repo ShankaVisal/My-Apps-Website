@@ -3,6 +3,7 @@ import type { App } from '@/lib/types';
 import { DownloadButtons } from '@/components/DownloadButtons';
 import { TechStackBadges } from '@/components/TechStackBadges';
 import { AppGallery } from '@/components/AppGallery';
+import { CallToActionBanner } from '@/components/CallToActionBanner';
 
 type TemplateProps = {
   app: App;
@@ -44,6 +45,7 @@ export default function Template3({ app }: TemplateProps) {
       <div className="container mx-auto px-4">
          <AppGallery images={app.gallery} appName={app.name} />
       </div>
+      <CallToActionBanner />
     </div>
   );
 }
